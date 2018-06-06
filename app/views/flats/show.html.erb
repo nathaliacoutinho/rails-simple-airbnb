@@ -1,0 +1,16 @@
+<div class="container">
+<div class="row">
+  <h2><%= @flat.name %></h2>
+  <p><%= @flat.address %></p>
+  <p><%= @flat.description %></p>
+  <p><%= @flat.price_per_night %></p>
+  <p><%= @flat.number_of_guests %></p>
+
+  <%= link_to "Edit", edit_flat_path(@flat), :class => "btn btn-warning" %>
+  <%= link_to "Delete", flat_path(@flat),
+  method: :delete,
+  data: { confirm: "Are you sure?" }, :class => "btn btn-danger" %>
+  <%= link_to "Back to flats", flats_path, :class => "btn btn-primary" %>
+</div>
+</div>
+
